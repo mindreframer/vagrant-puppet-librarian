@@ -13,7 +13,7 @@ I have looked at similar solutions:
   - https://github.com/purple52/librarian-puppet-vagrant
   - https://github.com/garethr/riemann-vagrant
 
-I did not quite like them, because the force me to install librarian-puppet on **my system**.
+I did not quite like them, because they force me to install librarian-puppet on **my system**.
 So I took the example from `purple52` and changed it a bit (from _two_ provisioners (shell + puppet) to just one)
 
 The simple solution implemented here uses a shell provisioner in your Vagrant
@@ -22,6 +22,12 @@ configuration to install and run Librarian-puppet and also **run puppet**.
 Like this:
 
     `puppet apply -vv  --modulepath=$PUPPET_DIR/modules/ $PUPPET_DIR/manifests/main.pp`
+
+It also installs two scripts for you:
+- `runpuppet`
+- `runlibrarian`
+
+So, you don't have to `vagrant reload`, which restarts your VM.... (duh???)
 
 ## How to use
 
