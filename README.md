@@ -1,5 +1,5 @@
 # Vagrant-puppet-librarian
-- this repository combines in a simple and effective way [Librarian-Puppet] + [Puppet] for [vag]
+- this repository combines in a simple and effective way [Librarian-Puppet] + [Puppet] for [Vagrant]
 
 ## Problem
 I assume you know, what pain points [Librarian-puppet] solves, [Librarian-puppet] can help by managing the [Puppet] modules used by your [Vagrant] box. But you can not use puppet provisioner like intended, because modules are not all installed your first run (it's [Librarian-Puppet]'s responsibility).
@@ -49,6 +49,6 @@ Please see the [LICENSE](https://github.com/mindreframer/vagrant-puppet-libraria
 file.
 
 
-[vag]: [Vagrant](http://vagrantup.com)
-[pup]: [Puppet](http://puppetlabs.com)
+[Vagrant]: http://vagrantup.com
+[Puppet]: http://puppetlabs.com
 [Librarian-Puppet]: https://github.com/rodjek/librarian-puppet
