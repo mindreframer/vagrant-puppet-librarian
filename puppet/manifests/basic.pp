@@ -16,6 +16,7 @@ class basic::users{
 class basic::packages{
   package{"tmux": ensure => installed}
   package{"curl": ensure => installed}
+  package{"vim":  ensure => installed}
 }
 
 
