@@ -14,7 +14,7 @@ I have looked at similar solutions:
   - https://github.com/garethr/riemann-vagrant
 
 I did not quite like them, because they force me to install librarian-puppet on **my system**.
-So I took the example from `purple52` and changed it a bit (from _two_ provisioners (shell + puppet) to just one)
+So I took the example from `purple52` and changed it a bit (from **two** provisioners (shell + puppet) to just one) + some minor stuff.
 
 The simple solution implemented here uses a shell provisioner in your Vagrant
 configuration to install and run Librarian-puppet and also **run puppet**.
