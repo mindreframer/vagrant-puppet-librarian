@@ -1,15 +1,12 @@
+Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
+File { owner => 0, group => 0, mode => 0644 }
+stage { 'first': }
+stage { 'last': }
+Stage['first'] -> Stage['main'] -> Stage['last']
 
-$puppet_dir = "/vagrant/puppet"
+import 'basic.pp'
+import 'nodes.pp'
 
-# script to run puppet
-file{"/usr/local/bin/runpuppet":
-  content => " \
-  sudo puppet apply -vv  --modulepath=$puppet_dir/modules/ $puppet_dir/manifests/main.pp\n",
-  mode    => 0755
-}
-
-# script to run librarian-puppet
-file{"/usr/local/bin/runlibrarian":
-  content => "cd $puppet_dir &&  sudo librarian-puppet update \n",
-  mode    => 0755
+class{'basic':
+  stage => first
 }
