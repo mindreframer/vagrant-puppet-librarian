@@ -12,4 +12,4 @@ mod "stdlib",
    :git => "git://github.com/puppetlabs/puppetlabs-stdlib.git"
 
 
-mod 'puppet-rvm', :git => "git://github.com/blt04/puppet-rvm.git"
+mod 'rvm', :git => "git://github.com/blt04/puppet-rvm.git"
