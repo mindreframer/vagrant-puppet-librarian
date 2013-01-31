@@ -22,12 +22,12 @@ configuration to install and run Librarian-puppet and also **run puppet**.
 Like this:
 
     `puppet apply -vv  --modulepath=$PUPPET_DIR/modules/ $PUPPET_DIR/manifests/main.pp`
-
 It also installs two scripts for you:
 - `runpuppet`
 - `runlibrarian`
 
-So, you don't have to `vagrant reload`, which restarts your VM.... (duh???)
+So, you don't have to `vagrant reload`, which restarts your VM.... (duh???) Just execute `runpuppet`, if you changed your code... If you updated the `Puppetfile`, execute `runlibrarian`. Simple.
+
 
 ## How to use
 
